@@ -1,0 +1,21 @@
+---
+
+- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+  hosts: all
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: GET DATA
+      ntc_show_command:
+        connection: ssh
+        platform: cisco_ios
+        command: 'show clock'
+        host: "{{ device_ip }}"
+        username: "{{ username }}"
+        password: "{{ secret }}"
+      register:  mydata
+
+    - name: DISPLAY mydata
+      debug: msg="{{ mydata.response }}"
