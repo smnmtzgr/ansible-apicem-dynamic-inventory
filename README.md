@@ -5,7 +5,7 @@ By contrast my project uses APIC-EM as a real dynamic inventory for ansible play
 
 ## usage
 1. Place the file *apicem-dynamic-inventory.py* in a folder at your ansible-project. For example the folder can be called "dynamic-inventory".
-2. Edit the file and change the variables self.controllername, self.username and self.password to your APIC-EM values.
+2. Edit the file and change the variables self.controllername, self.username and self.password to your own APIC-EM values.
 3. Execute a playbook with APIC-EM as the dynamic inventory.
 
 ## examples
